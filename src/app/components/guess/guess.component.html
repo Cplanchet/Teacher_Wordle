@@ -1,0 +1,3 @@
+<p>
+    <span *ngFor="let char of guess.split(''); let i = index" [ngClass]="{'color-green': char == answer[i], 'color-yellow': answer.includes(char)}">{{char}}</span>
+</p>
