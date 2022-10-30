@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --primary-color: #2bff00;
+    --secondary-color: #eeff00;
+}
+
+html[color-theme='light']{
+    --text-color: #000000;
+    --background-color: #ffffff;
+}
+
+body{
+    color: var(--text-color);
+    background-color: var(--background-color);
+}

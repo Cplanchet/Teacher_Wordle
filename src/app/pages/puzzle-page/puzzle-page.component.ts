@@ -16,6 +16,9 @@ export class PuzzlePageComponent implements OnInit {
     if(!this.wordService.getWord()){
       this.router.navigate([''])
     }
+
+    //this is how the theme can be changed to light mode
+    //document.documentElement.setAttribute('color-theme', 'light');
   }
   
   addGuess(guess: String){
