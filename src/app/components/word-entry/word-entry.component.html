@@ -1,2 +1,8 @@
-<input *ngFor="let char of answer.split(''); let i = index" maxlength="1" type="text" [(ngModel)]="guess[i]" id="char-{{i}}" (input)="focusIndex(i + 1)"/>
-<button (click)="submitGuess()" id="submit-button">Guess</button>
+<div id="entry-container">
+    <div id="entry-input-row">
+        <input *ngFor="let char of answer.split(''); let i = index" maxlength="1" type="text" [(ngModel)]="guess[i]" id="char-{{i}}" (input)="focusIndex(i + 1)"/>
+    </div>
+    <div id="entry-button-row">
+        <button (click)="submitGuess()" id="submit-button">Guess</button>
+    </div>
+</div>
