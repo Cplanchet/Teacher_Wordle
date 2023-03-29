@@ -31,6 +31,7 @@ export class WordEntryComponent implements OnInit {
     }
 
     this.onGuess.emit(this.guess.join(''));
+    this.guess = [];
   }
 
   focusIndex(index: Number){
