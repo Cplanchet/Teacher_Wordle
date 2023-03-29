@@ -24,4 +24,11 @@ export class PuzzlePageComponent implements OnInit {
   addGuess(guess: String){
     this.guesses.push(guess);
   }
+
+  activateVictory(){
+    console.log("YOU WIN!!!");  //TODO: add victory logic
+  }
 }
+
+// TODO: Take the logic to check if victory out of the guess component and check it whenever a guess is generated. 
+// TODO: Add a letters to a list when they are completely wrong. Prevent the user from entering those letters. 
