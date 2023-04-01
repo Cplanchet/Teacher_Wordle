@@ -11,6 +11,7 @@ export class WordEntryComponent implements OnInit {
   public onGuess = new EventEmitter<String>();
   public guess: String[] = [];
   public answer!: String;
+  public error!: String;
 
   constructor(private wordService: WordService) {}
 
@@ -20,16 +21,24 @@ export class WordEntryComponent implements OnInit {
     for (let i = 0; i < this.answer.length; i++) {
       this.guess.push('');
     }
-    console.log(this.guess);
   }
-
   public submitGuess() {
-    console.log(this.guess);
+    this.error = "";
     if (this.guess.includes('')) {
-      //TODO: add validation
-      console.error('guess cannot contain empty string');
+      this.error = "You must enter a letter for each box";
+      return;
     }
 
+    this.guess.forEach(char =>{
+      if(char.match(/[a-zA-Z]*/g)?.[0] == ""){
+        this.error = "guess must only include letters"
+      }
+    });
+
+    if(this.error){
+      return;
+    }
+    
     this.onGuess.emit(this.guess.join(''));
     this.guess = [];
   }
