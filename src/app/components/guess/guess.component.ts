@@ -7,7 +7,7 @@ import { WordService } from 'src/app/services/word.service';
   styleUrls: ['./guess.component.scss']
 })
 export class GuessComponent implements OnInit {
-  @Input() 
+  @Input()
   public guess!: String;
   @Output()
   public onWin = new EventEmitter();
@@ -19,8 +19,8 @@ export class GuessComponent implements OnInit {
   ngOnInit(): void {
     this.answer = this.wordService.getWord().toLocaleLowerCase();
     this.guess = this.guess.toLocaleLowerCase();
-    
-    if(this.answer == this.guess){
+
+    if (this.answer == this.guess) {
       this.onWin.emit();
     }
   }

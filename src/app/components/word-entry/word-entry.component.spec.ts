@@ -8,9 +8,9 @@ describe('WordEntryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WordEntryComponent ]
+      declarations: [WordEntryComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(WordEntryComponent);
     component = fixture.componentInstance;

@@ -14,10 +14,10 @@ describe('HomePageComponent', () => {
     setWordSpy = mockWordService.setWord;
 
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ],
-      providers: [{provide: WordService, useValue: mockWordService}]
+      declarations: [HomePageComponent],
+      providers: [{ provide: WordService, useValue: mockWordService }]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;

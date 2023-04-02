@@ -1,7 +1,7 @@
 <h1>Wordle</h1>
 <div>
-    <tw-guess-word *ngFor="let guess of guesses" guess={{guess}} (onWin)="activateVictory()"></tw-guess-word>
+  <tw-guess-word *ngFor="let guess of guesses" guess={{guess}} (onWin)="activateVictory()"></tw-guess-word>
 </div>
 <div>
-    <tw-word-entry (onGuess)="addGuess($event)"></tw-word-entry>
+  <tw-word-entry (onGuess)="addGuess($event)"></tw-word-entry>
 </div>

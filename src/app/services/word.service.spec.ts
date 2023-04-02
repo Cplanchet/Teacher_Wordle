@@ -14,12 +14,12 @@ describe('WordService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be able to set word', () =>{
+  it('should be able to set word', () => {
     service.setWord('test');
     expect(service.getWord()).toBe('test');
   });
 
-  it('should be able to get word', () =>{
+  it('should be able to get word', () => {
     service.setWord('test');
     expect(service.getWord()).toBe('test');
   });

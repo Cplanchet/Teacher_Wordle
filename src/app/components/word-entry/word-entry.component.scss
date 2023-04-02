@@ -1,32 +1,33 @@
 input {
-    padding: 10px 15px;
-    width: 2rem;
-    font-size: 2.5rem;
-    text-align: center;
+  padding: 10px 15px;
+  width: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 #entry-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#entry-input-row { 
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 1rem;
-    gap: 5px;
-    input{
-        border: 5px solid black;
-    }
+#entry-input-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  gap: 5px;
+
+  input {
+    border: 5px solid black;
+  }
 }
 
-#error-message{
-    color: red;
-    margin-top: 2rem;
+#error-message {
+  color: red;
+  margin-top: 2rem;
 }
 
-.error-state.ng-invalid{
-    border-color: red !important;
+.error-state.ng-invalid {
+  border-color: red !important;
 }

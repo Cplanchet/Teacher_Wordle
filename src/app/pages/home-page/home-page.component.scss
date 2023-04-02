@@ -1,24 +1,22 @@
-#home-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+#home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-#home-text-box{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+#home-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-    input.ng-invalid.error-state {
-        border-color: red;
-    }
+  input.ng-invalid.error-state {
+    border-color: red;
+  }
 }
 
-#error-message{
-    color: red;
-    margin-top: 2rem;
+#error-message {
+  color: red;
+  margin-top: 2rem;
 }
-
-

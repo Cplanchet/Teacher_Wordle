@@ -7,15 +7,15 @@ import { WordService } from 'src/app/services/word.service';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent { 
+export class HomePageComponent {
   public word!: String;
   public error!: String;
   constructor(private wordService: WordService, private router: Router) { }
 
-  public submit(){
+  public submit() {
     this.error = "";
 
-    if(!this.word) {
+    if (!this.word) {
       this.error = "Word is required";
       return;
     }
@@ -23,7 +23,7 @@ export class HomePageComponent {
       this.error = "Word must only contain letters";
       return;
     }
-    
+
     this.wordService.setWord(this.word);
     this.router.navigate(["puzzle"]);
   }
