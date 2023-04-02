@@ -10,6 +10,15 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    input.ng-invalid.error-state {
+        border-color: red;
+    }
+}
+
+#error-message{
+    color: red;
+    margin-top: 2rem;
 }
 
 

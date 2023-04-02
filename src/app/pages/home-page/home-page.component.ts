@@ -7,18 +7,24 @@ import { WordService } from 'src/app/services/word.service';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent{
+export class HomePageComponent { 
   public word!: String;
+  public error!: String;
   constructor(private wordService: WordService, private router: Router) { }
 
   public submit(){
-    if(!this.word){
-      //TODO: Add Validation
-      console.log("Word is required")
+    this.error = "";
+
+    if(!this.word) {
+      this.error = "Word is required";
+      return;
     }
-
+    if (this.word.match(/[^a-zA-Z]*/g)?.[0] != "") {
+      this.error = "Word must only contain letters";
+      return;
+    }
+    
     this.wordService.setWord(this.word);
-
     this.router.navigate(["puzzle"]);
   }
 }
