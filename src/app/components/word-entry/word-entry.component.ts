@@ -38,17 +38,17 @@ export class WordEntryComponent implements OnInit {
     if(this.error){
       return;
     }
-    
+
     this.onGuess.emit(this.guess.join(''));
     this.guess = [];
   }
 
-  focusIndex(index: Number){
-    //TODO: allow for baskspaced to not change focus
+  focusIndex(index: number){
     if(index == this.answer.length){
       document.getElementById('submit-button')?.focus();
     }
-
-    document.getElementById('char-' + index)?.focus();
+    if (this.guess[index-1] != ''){
+      document.getElementById('char-' + index)?.focus();
+    }
   }
 }
