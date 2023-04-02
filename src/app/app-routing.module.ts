@@ -4,8 +4,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PuzzlePageComponent } from './pages/puzzle-page/puzzle-page.component';
 
 const routes: Routes = [
-  {path: 'puzzle', component: PuzzlePageComponent},
-  {path: '', component: HomePageComponent}
+  { path: 'puzzle', component: PuzzlePageComponent },
+  { path: '', component: HomePageComponent }
 ];
 
 @NgModule({

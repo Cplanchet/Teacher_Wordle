@@ -1,16 +1,12 @@
 <div id="entry-container">
-    <div id="entry-input-row">
-        <input *ngFor="let char of answer.split(''); let i = index" maxlength="1" type="text" 
-            [(ngModel)]="guess[i]" id="char-{{i}}" 
-            (input)="focusIndex(i + 1)"
-            required 
-            pattern="[a-zA-Z]*"
-            [ngClass]="{'error-state': error}"/>
-    </div>
-    <div id="entry-button-row">
-        <button (click)="submitGuess()" id="submit-button">Guess</button>
-    </div>
-    <div id="error-message" *ngIf="error">
-        {{error}}
-    </div>
+  <div id="entry-input-row">
+    <input *ngFor="let char of answer.split(''); let i = index" maxlength="1" type="text" [(ngModel)]="guess[i]"
+      id="char-{{i}}" (input)="focusIndex(i + 1)" required pattern="[a-zA-Z]*" [ngClass]="{'error-state': error}" />
+  </div>
+  <div id="entry-button-row">
+    <button (click)="submitGuess()" id="submit-button">Guess</button>
+  </div>
+  <div id="error-message" *ngIf="error">
+    {{error}}
+  </div>
 </div>

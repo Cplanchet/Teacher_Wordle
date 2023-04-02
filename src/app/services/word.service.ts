@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 export class WordService {
   private word!: String;
   constructor() { }
-  
-  public getWord(): String{
+
+  public getWord(): String {
     return this.word
   }
 
-  public setWord(word: String): void{
+  public setWord(word: String): void {
     this.word = word;
   }
 }

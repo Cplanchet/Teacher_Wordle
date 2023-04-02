@@ -13,7 +13,7 @@ export class WordEntryComponent implements OnInit {
   public answer!: String;
   public error!: String;
 
-  constructor(private wordService: WordService) {}
+  constructor(private wordService: WordService) { }
 
   ngOnInit(): void {
     this.answer = this.wordService.getWord();
@@ -29,15 +29,16 @@ export class WordEntryComponent implements OnInit {
       return;
     }
 
-    this.guess.forEach(char =>{
-      if(char.match(/[a-zA-Z]*/g)?.[0] == ""){
+    this.guess.forEach(char => {
+      if (char.match(/[a-zA-Z]*/g)?.[0] == "") {
         this.error = "guess must only include letters"
       }
     });
 
-    if(this.error){
+    if (this.error) {
       return;
     }
+
 
     this.onGuess.emit(this.guess.join(''));
     this.guess = [];

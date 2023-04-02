@@ -1,26 +1,26 @@
-.guess-letter.color-yellow{
-    color: black;
-    background-color: #ffff00cc;
+.guess-letter.color-yellow {
+  color: black;
+  background-color: #ffff00cc;
 }
 
-.guess-letter.color-green{
-    color: black;
-    background-color: #00ff00cc;
+.guess-letter.color-green {
+  color: black;
+  background-color: #00ff00cc;
 }
 
 .guess-letter {
-    font-size: 2.5rem;
-    padding: 10px 15px;
-    text-align: center;
-    border: 5px solid black;
-    width: 2rem;
-    background-color: #000000cc;
-    color: white;
+  font-size: 2.5rem;
+  padding: 10px 15px;
+  text-align: center;
+  border: 5px solid black;
+  width: 2rem;
+  background-color: #000000cc;
+  color: white;
 }
 
-p{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center;
+p {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
 }
