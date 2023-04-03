@@ -39,16 +39,17 @@ export class WordEntryComponent implements OnInit {
       return;
     }
 
+
     this.onGuess.emit(this.guess.join(''));
     this.guess = [];
   }
 
-  focusIndex(index: Number) {
-    //TODO: allow for baskspaced to not change focus
-    if (index == this.answer.length) {
+  focusIndex(index: number){
+    if(index == this.answer.length){
       document.getElementById('submit-button')?.focus();
     }
-
-    document.getElementById('char-' + index)?.focus();
+    if (this.guess[index-1] != ''){
+      document.getElementById('char-' + index)?.focus();
+    }
   }
 }
