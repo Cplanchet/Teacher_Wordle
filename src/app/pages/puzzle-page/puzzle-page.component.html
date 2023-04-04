@@ -1,7 +1,13 @@
 <h1>Wordle</h1>
+
 <div>
-  <tw-guess-word *ngFor="let guess of guesses" guess={{guess}} (onWin)="activateVictory()"></tw-guess-word>
+  <tw-guess-word *ngFor="let guess of guesses" guess={{guess}} answer={{answer}}></tw-guess-word>
 </div>
-<div>
+<div *ngIf="!gameOver">
   <tw-word-entry (onGuess)="addGuess($event)"></tw-word-entry>
+</div>
+<div id="gameover-section" *ngIf="gameOver">
+  <h2 id="win-text" *ngIf="winner">Congratulations! You Win!</h2>
+  <h2 id="lose-text" *ngIf="!winner">You Lose! Better Luck Next Time!</h2>
+  <button (click)="reloadGame()">New Game</button>
 </div>

@@ -9,24 +9,43 @@ import { WordService } from 'src/app/services/word.service';
 })
 export class PuzzlePageComponent implements OnInit {
   public guesses: String[] = [];
+  public answer!: String;
+  public gameOver: boolean = false;
+  public winner: boolean = false;
 
   constructor(private wordService: WordService, private router: Router) { }
 
   ngOnInit(): void {
-    if (!this.wordService.getWord()) {
+    this.answer = this.wordService.getWord();
+    if (!this.answer) {
       this.router.navigate([''])
     }
-
     //this is how the theme can be changed to light mode
     //document.documentElement.setAttribute('color-theme', 'light');
   }
 
   addGuess(guess: String) {
     this.guesses.push(guess);
+    if (this.checkWin(guess)) {
+      this.activateVictory();
+      return;
+    }
+    if (this.guesses.length >= 6) {
+      this.gameOver = true;
+    }
   }
 
   activateVictory() {
-    console.log("YOU WIN!!!");  //TODO: add victory logic
+    this.winner = true;
+    this.gameOver = true;
+  }
+
+  reloadGame() {
+    this.router.navigate([''])
+  }
+
+  checkWin(guess: String): boolean {
+    return guess.toLowerCase() === this.answer.toLowerCase();
   }
 }
 

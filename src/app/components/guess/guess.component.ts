@@ -9,19 +9,11 @@ import { WordService } from 'src/app/services/word.service';
 export class GuessComponent implements OnInit {
   @Input()
   public guess!: String;
-  @Output()
-  public onWin = new EventEmitter();
-
+  @Input()
   public answer!: String;
 
-  constructor(private wordService: WordService) { }
-
   ngOnInit(): void {
-    this.answer = this.wordService.getWord().toLocaleLowerCase();
+    this.answer = this.answer.toLocaleLowerCase();
     this.guess = this.guess.toLocaleLowerCase();
-
-    if (this.answer == this.guess) {
-      this.onWin.emit();
-    }
   }
 }
