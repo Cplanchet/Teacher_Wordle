@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Teacher_Wordle';
-  onLightmodeChange(e: any) {
-    if (e.target.checked) {
+
+  onLightmodeChange(selected: Boolean) {
+    if (selected) {
       document.documentElement.setAttribute('color-theme', 'light');
       return;
     }

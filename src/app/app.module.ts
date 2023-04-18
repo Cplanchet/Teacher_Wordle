@@ -8,6 +8,7 @@ import { PuzzlePageComponent } from './pages/puzzle-page/puzzle-page.component';
 import { WordEntryComponent } from './components/word-entry/word-entry.component';
 import { GuessComponent } from './components/guess/guess.component';
 import { FormsModule } from '@angular/forms';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     PuzzlePageComponent,
     WordEntryComponent,
     GuessComponent,
+    SwitchComponent,
   ],
   imports: [
     BrowserModule,

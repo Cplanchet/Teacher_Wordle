@@ -1,0 +1,11 @@
+<div class="tw-switch-container">
+  <div>
+    <ng-content></ng-content>
+  </div>
+  <div>
+    <label class="switch">
+      <input type="checkbox" (change)="Change()" [(ngModel)]="selected">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
