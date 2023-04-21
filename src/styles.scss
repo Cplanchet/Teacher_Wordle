@@ -1,39 +1,45 @@
-html{
-    --text-color: #ffffff;
-    --background-color: #181818;
-    --primary-color: #2bff00;
-    --secondary-color: #eeff00;
+@font-face {
+  font-family: PTSerif;
+  src: url('/src/assets/Font/PTSerif/PTSerif-Regular.ttf');
 }
 
-html[color-theme='light']{
-    --text-color: #000000;
-    --background-color: #ffffff;
+html {
+  --text-color: #ffffff;
+  --background-color: #181818;
+  --primary-color: #2bff00;
+  --secondary-color: #eeff00;
+  font-family: PTSerif;
 }
 
-body{
-    color: var(--text-color);
-    background-color: var(--background-color);
+html[color-theme='light'] {
+  --text-color: #000000;
+  --background-color: #ffffff;
 }
 
-h1{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4rem;
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
-button{
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color:#c0c0c0;
-    border: none;
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
 }
 
-button:hover{
-    background-color:#858585;
-    cursor: pointer;
+button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #c0c0c0;
+  border: none;
 }
 
-input{
-    padding: 5px 5px;
-    font-size: 1.5rem;
+button:hover {
+  background-color: #858585;
+  cursor: pointer;
+}
+
+input {
+  padding: 5px 5px;
+  font-size: 1.5rem;
 }
