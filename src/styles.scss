@@ -1,14 +1,9 @@
-@font-face {
-  font-family: PTSerif;
-  src: url('/src/assets/Font/PTSerif/PTSerif-Regular.ttf');
-}
-
 html {
   --text-color: #ffffff;
   --background-color: #181818;
   --primary-color: #2bff00;
   --secondary-color: #eeff00;
-  font-family: PTSerif;
+  font-family: 'PT Serif';
 }
 
 html[color-theme='light'] {
