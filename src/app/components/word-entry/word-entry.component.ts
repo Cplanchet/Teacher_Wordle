@@ -24,7 +24,7 @@ export class WordEntryComponent implements OnInit {
   }
   public submitGuess() {
     this.error = "";
-    if (this.guess.includes('')) {
+    if (this.guess.includes('') || this.guess.length != this.answer.length) {
       this.error = "You must enter a letter for each box";
       return;
     }
@@ -44,11 +44,11 @@ export class WordEntryComponent implements OnInit {
     this.guess = [];
   }
 
-  focusIndex(index: number){
-    if(index == this.answer.length){
+  focusIndex(index: number) {
+    if (index == this.answer.length) {
       document.getElementById('submit-button')?.focus();
     }
-    if (this.guess[index-1] != ''){
+    if (this.guess[index - 1] != '') {
       document.getElementById('char-' + index)?.focus();
     }
   }
