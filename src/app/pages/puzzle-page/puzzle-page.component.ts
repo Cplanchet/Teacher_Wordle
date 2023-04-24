@@ -8,8 +8,8 @@ import { WordService } from 'src/app/services/word.service';
   styleUrls: ['./puzzle-page.component.scss']
 })
 export class PuzzlePageComponent implements OnInit {
-  public guesses: String[] = [];
-  public answer!: String;
+  public guesses: string[] = [];
+  public answer!: string;
   public gameOver: boolean = false;
   public winner: boolean = false;
 
@@ -24,7 +24,7 @@ export class PuzzlePageComponent implements OnInit {
     //document.documentElement.setAttribute('color-theme', 'light');
   }
 
-  addGuess(guess: String) {
+  addGuess(guess: string) {
     this.guesses.push(guess);
     if (this.checkWin(guess)) {
       this.activateVictory();
@@ -44,7 +44,7 @@ export class PuzzlePageComponent implements OnInit {
     this.router.navigate([''])
   }
 
-  checkWin(guess: String): boolean {
+  checkWin(guess: string): boolean {
     return guess.toLowerCase() === this.answer.toLowerCase();
   }
 }

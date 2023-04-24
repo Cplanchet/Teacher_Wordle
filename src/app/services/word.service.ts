@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WordService {
-  private word!: String;
+  private word!: string;
   constructor() { }
 
-  public getWord(): String {
+  public getWord(): string {
     return this.word
   }
 
-  public setWord(word: String): void {
+  public setWord(word: string): void {
     this.word = word;
   }
 }

@@ -8,8 +8,8 @@ import { WordService } from 'src/app/services/word.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  public word!: String;
-  public error!: String;
+  public word!: string;
+  public error!: string;
   constructor(private wordService: WordService, private router: Router) { }
 
   public submit() {
